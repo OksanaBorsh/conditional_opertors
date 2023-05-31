@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 3</title>
+    <script>
+        function checkCredentials() {
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            var message;
+
+            if (
+                (username === "ivan" && password === "333") ||
+                (username === "ssss" && password === "666") ||
+                (username === "gibs" && password === "0000")
+            ) {
+                message = "Ласкаво просимо";
+            } else {
+                message = "Користувач не знайдений";
+            }
+
+            document.getElementById("messageOutput").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <h2>Завдання 3</h2>
+    <label for="usernameInput">Ім'я:</label>
+    <input type="text" id="usernameInput" placeholder="Введіть ім'я"><br>
+    <label for="passwordInput">Пароль:</label>
+    <input type="password" id="passwordInput" placeholder="Введіть пароль"><br>
+    <button onclick="checkCredentials()">Перевірити дані</button>
+    <p id="messageOutput"></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевірка часу</title>
+    <script>
+        function checkTime() {
+            var time = parseInt(document.getElementById("timeInput").value);
+            var greeting;
+
+            if (time > 17) {
+                greeting = "Добрий вечір";
+            } else {
+                greeting = "Доброго дня";
+            }
+
+            document.getElementById("greetingOutput").innerHTML = greeting;
+        }
+    </script>
+</head>
+<body>
+    <h2>Завдання 1</h2>
+    <input type="text" id="timeInput" placeholder="Введіть час у годиннику">
+    <button onclick="checkTime()">Перевірити час</button>
+    <p id="greetingOutput"></p>
+</body>
+</html>

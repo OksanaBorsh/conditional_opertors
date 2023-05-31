@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 2</title>
+    <script>
+        function checkName() {
+            var name = document.getElementById("nameInput").value;
+            var greeting;
+
+            if (name === "John") {
+                greeting = "Привіт " + name;
+            } else {
+                greeting = "Я вас не знаю";
+            }
+
+            document.getElementById("greetingOutput").textContent = greeting;
+        }
+    </script>
+</head>
+<body>
+    <h2>Завдання 2</h2>
+    <label for="nameInput">Ім'я:</label>
+    <input type="text" id="nameInput" placeholder="Введіть ім'я">
+    <button onclick="checkName()">Перевірити ім'я</button>
+    <p id="greetingOutput"></p>
+</body>
+</html>
